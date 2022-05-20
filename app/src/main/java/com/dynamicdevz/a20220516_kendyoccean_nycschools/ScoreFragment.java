@@ -31,7 +31,7 @@ public class ScoreFragment extends BaseFragment {
                 Log.d("LOADING", "LOADING....");
             } else if (stateAnswer instanceof StateAnswer.SCORES) {
                 Log.d("SUCCESS", ((StateAnswer.SCORES) stateAnswer).getScores().get(0).getDbn());
-                
+                //hello
             } else if (stateAnswer instanceof StateAnswer.ERROR){
                 Log.e("ERROR", ((StateAnswer.ERROR) stateAnswer).getError().getLocalizedMessage());
             }

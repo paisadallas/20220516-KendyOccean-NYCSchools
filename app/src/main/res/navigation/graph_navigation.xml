@@ -10,12 +10,16 @@
         android:label="fragment_school"
         tools:layout="@layout/fragment_school" >
         <action
-            android:id="@+id/action_schoolFragment_to_scoreFragment"
-            app:destination="@id/scoreFragment" />
+            android:id="@+id/action_schoolFragment_to_myScoreFragment"
+            app:destination="@id/myScoreFragment" />
     </fragment>
     <fragment
-        android:id="@+id/scoreFragment"
-        android:name="com.dynamicdevz.a20220516_kendyoccean_nycschools.ScoreFragment"
-        android:label="fragment_score"
-        tools:layout="@layout/fragment_score" />
+        android:id="@+id/myScoreFragment"
+        android:name="com.dynamicdevz.a20220516_kendyoccean_nycschools.view.MyScoreFragment"
+        android:label="fragment_my_score"
+        tools:layout="@layout/fragment_my_score" >
+        <argument
+            android:name="dbn"
+            app:argType="string" />
+    </fragment>
 </navigation>

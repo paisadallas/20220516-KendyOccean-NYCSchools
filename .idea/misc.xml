@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17507568113017155" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.21693840579710144" />
+        <entry key="app/src/main/res/layout/fragment_my_score.xml" value="0.1453804347826087" />
         <entry key="app/src/main/res/layout/fragment_school.xml" value="0.18161094224924013" />
         <entry key="app/src/main/res/layout/fragment_score.xml" value="0.10099637681159421" />
         <entry key="app/src/main/res/layout/school_item.xml" value="0.21693840579710144" />

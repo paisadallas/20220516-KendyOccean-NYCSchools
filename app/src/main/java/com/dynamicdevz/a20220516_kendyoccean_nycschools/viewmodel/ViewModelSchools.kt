@@ -24,7 +24,7 @@ class ViewModelSchools @Inject constructor(
     val schools: LiveData<StateAnswer> get() = _schools
 
     private val _scores: MutableLiveData<StateAnswer> = MutableLiveData(StateAnswer.LOADING)
-    val scores: LiveData<StateAnswer> get() = _schools
+    val scores: LiveData<StateAnswer> get() = _scores
 
     fun getAllSchools() {
         repository.schools

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dynamicdevz.a20220516_kendyoccean_nycschools.adapter.SchoolAdapter
@@ -20,13 +21,12 @@ class SchoolFragment : BaseFragment() {
 
     private val schoolAdapter by lazy {
         SchoolAdapter(){
-            var data = it.dbn
- //((StateAnswer.SCORES) stateAnswer).getScores().get(0).getDbn()
+            var data = it.dbn.toString()
 
-           viewModelSchool.dbnSchool = it.dbn.toString()
-            findNavController().navigate(R.id.action_schoolFragment_to_scoreFragment)
-
-
+          // viewModelSchool.dbnSchool = it.dbn.toString()
+            var intention = SchoolFragmentDirections.actionSchoolFragmentToMyScoreFragment(data)
+            findNavController().navigate(intention)
+         //   findNavController().navigate(R.id.action_schoolFragment_to_scoreFragment)
         }
     }
 
@@ -48,9 +48,10 @@ class SchoolFragment : BaseFragment() {
                     Log.e("LOADING", "LOADING...")
                 }
                 is StateAnswer.SCHOOLS -> {
-                    Log.d("SUCCESS", it.schools.first().dbn.toString())
+                    Log.d("SUCCESS1", it.schools.first().dbn.toString())
                     it.schools.let {
                         schoolAdapter.update(it)
+
                     }
                 }
                 is StateAnswer.ERROR -> {

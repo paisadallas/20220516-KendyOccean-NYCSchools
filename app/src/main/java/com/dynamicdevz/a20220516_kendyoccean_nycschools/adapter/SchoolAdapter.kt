@@ -32,7 +32,7 @@ class ViewHolder(
 ): RecyclerView.ViewHolder(binding.root){
 
     fun bind(schoolItem:Schools,openSchool: (Schools) -> Unit){
-        binding.tvSchoolName.text =  schoolItem.city
+        binding.tvSchoolName.text =  schoolItem.schoolName
         binding.tvCity.text = "City:  ${schoolItem.city}"
         binding.tvZip.text = "Zip:  ${schoolItem.zip}"
         binding.tvPhoneNumber.text = "Phone:  ${schoolItem.location}"

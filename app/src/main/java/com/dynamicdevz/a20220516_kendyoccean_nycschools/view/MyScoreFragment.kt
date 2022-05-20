@@ -43,6 +43,10 @@ class MyScoreFragment : BaseFragment() {
 
                             bind(it)
                         }
+                        else{
+                            binding.tvSchoolName.text = "Empty"
+                        }
+
                     }
 
                 }
